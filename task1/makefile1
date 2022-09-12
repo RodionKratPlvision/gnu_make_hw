@@ -1,0 +1,9 @@
+main: src.o
+	gcc -o main main.c src.o
+
+
+src.o: src.c
+	gcc -c src.c
+
+clean:
+	rm *.o main

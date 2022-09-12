@@ -1,0 +1,12 @@
+CC = gcc
+SRC = src.o
+MNE = main.c
+
+main: $(SRC)
+	$(CC) -o $@ $(MNE) $<
+
+$(SRC): src.c
+	$(CC) -c $^
+
+clean:
+	rm $(SRC) main
